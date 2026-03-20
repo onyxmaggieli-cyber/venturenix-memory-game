@@ -1,13 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const initialCards = [
-  { id: 1, src: '/img/animal1.jpg', alt: 'Animal 1' },
-  { id: 2, src: '/img/animal2.jpg', alt: 'Animal 2' },
-  { id: 3, src: '/img/animal3.jpg', alt: 'Animal 3' },
-  { id: 4, src: '/img/animal4.jpg', alt: 'Animal 4' },
-  { id: 5, src: '/img/animal5.jpg', alt: 'Animal 5' },
-  { id: 6, src: '/img/animal6.jpg', alt: 'Animal 6' },
+  { id: 1, src: `${BASE}img/animal1.jpg`, alt: 'Animal 1' },
+  { id: 2, src: `${BASE}img/animal2.jpg`, alt: 'Animal 2' },
+  { id: 3, src: `${BASE}img/animal3.jpg`, alt: 'Animal 3' },
+  { id: 4, src: `${BASE}img/animal4.jpg`, alt: 'Animal 4' },
+  { id: 5, src: `${BASE}img/animal5.jpg`, alt: 'Animal 5' },
+  { id: 6, src: `${BASE}img/animal6.jpg`, alt: 'Animal 6' },
 ];
 
 function shuffle(array) {
